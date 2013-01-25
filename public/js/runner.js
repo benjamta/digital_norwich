@@ -11,7 +11,7 @@ BOOMR.subscribe('before_beacon', function(o) {
 
     if(o.bw) {
         var bandwidth = parseInt(o.bw/1024);
-        html += "Your bandwidth is: " + bandwidth + "kbps<br/><br/>";
+        html += "Your bandwidth is: " + Math.round(bandwidth/1024*10)/10 + " mbps<br/><br/>";
     }
 
     html += '<div class="btn-group" data-toggle="buttons-radio">' +
